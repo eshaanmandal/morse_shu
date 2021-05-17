@@ -11,15 +11,22 @@
 ```python
 import morshu
 
-m = morshu.Morse()
-text = 'lamp oil rope bomb you want it'
-print(m.convert_to_morse(text))
-coded_msg = m.convert_to_morse(text)
-print(m.convert_to_normal_text(coded_msg))
+
+m = morshu.Morse(space_separator='  ', char_separator=' ')
+
+text_message = '''Lamp oil, rope, bombs, you want it?'''
+
+try:
+    m.convert_to_morse(text_message)
+    print(m.coded_string)
+    m.convert_to_normal_text(m.coded_string)
+    print(m.normal_text)
+except AttributeError:
+    print(m.error_message)
 ```
 ### this will give the output
 
 ```
-.-.. .- -- .--.   --- .. .-..   .-. --- .--. .   -... --- -- -...   -.-- --- ..-   .-- .- -. -   .. - 
-lamp oil rope bomb you want it
+.-.. .- -- .--.  --- .. .-..    .-. --- .--. .    -... --- -- -... ...    -.-- --- ..-  .-- .- -. -  .. - ---- 
+lamp oil rope bombs you want it?
 ```

@@ -24,7 +24,7 @@ try:
 except AttributeError:
     print(m.error_message)
 ```
-### this will give the output
+### This will give the output
 
 ```
 .-.. .- -- .--.  --- .. .-..    .-. --- .--. .    -... --- -- -... ...    -.-- --- ..-  .-- .- -. -  .. - ---- 
